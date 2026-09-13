@@ -21,7 +21,7 @@ _11 de septiembre de 2026_ — **(ajustar si la fecha real de la sesión fue otr
 
 ## 🧩 Boceto inicial del modelo
 
-<img width="762" height="452" alt="DFD EdukIT - Taller 5" src="dfd-edukit-borrador.drawio.jpeg" />
+<img width="762" height="452" alt="DFD EdukIT - Taller 5" src="dfd-edukit-borrador.drawio.svg" />
 
 > El archivo `dfd-edukit-borrador.drawio` de esta carpeta corresponde al diagrama de flujo de datos del caso base de EdukIT, resuelto en clase siguiendo el ejemplo guiado (Paso 1 de la metodología). El boceto inicial del cliente real (a mano/pizarra) solo tenía los 2 procesos y los 2 almacenes de datos identificados, sin marcar todavía el límite de confianza ni los flujos numerados. El DFD completo del cliente, con el límite de confianza entre la biblioteca y la infraestructura externa ya trazado, quedó como `dfd-cliente-final.drawio` en `entrega/` — un ajuste que se hizo *después* de clase, al hacer el reconocimiento pasivo sobre el manual oficial de Llave del Saber: nos dimos cuenta de que la credencial de acceso (F4) merecía quedar resaltada como el flujo más crítico del diagrama, algo que no era evidente en el boceto de pizarra.
 
