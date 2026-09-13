@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Claude" version="24.0.0">
+  <diagram name="DFD EdukIT" id="dfd-edukit">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+    <mxCell id="est" value="🧑 Estudiante" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1168bd;fontColor=#ffffff;strokeColor=#0b4884;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="220" width="200" height="90" as="geometry" />
+    </mxCell>
+    <mxCell id="z1" value="Backend EdukIT (zona de confianza)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#c0392b;strokeWidth=2;dashed=1;verticalAlign=top;fontSize=12;fontStyle=1;fontColor=#c0392b;" vertex="1" parent="1">
+      <mxGeometry x="340" y="60" width="480" height="460" as="geometry" />
+    </mxCell>
+    <mxCell id="p1" value="P1: Sistema de
+Autenticación" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438dd5;fontColor=#ffffff;strokeColor=#2e6295;fontSize=11;fontStyle=1;arcSize=30;" vertex="1" parent="z1">
+      <mxGeometry x="60" y="60" width="200" height="90" as="geometry" />
+    </mxCell>
+    <mxCell id="p2" value="P2: Módulo de Cursos" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438dd5;fontColor=#ffffff;strokeColor=#2e6295;fontSize=11;fontStyle=1;arcSize=30;" vertex="1" parent="z1">
+      <mxGeometry x="60" y="300" width="200" height="90" as="geometry" />
+    </mxCell>
+    <mxCell id="d1" value="D1: BD de Usuarios" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#6b6b6b;fontColor=#ffffff;strokeColor=#4a4a4a;fontSize=11;fontStyle=1;" vertex="1" parent="z1">
+      <mxGeometry x="300" y="60" width="160" height="90" as="geometry" />
+    </mxCell>
+    <mxCell id="d2" value="D2: Almacén de
+Contenido" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#6b6b6b;fontColor=#ffffff;strokeColor=#4a4a4a;fontSize=11;fontStyle=1;" vertex="1" parent="z1">
+      <mxGeometry x="300" y="300" width="160" height="90" as="geometry" />
+    </mxCell>
+    <mxCell id="e1" value="F1: credenciales" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontColor=#333333;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="est" target="p1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e2" value="F2: consulta" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontColor=#333333;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="p1" target="d1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e3" value="F3: token de sesión" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontColor=#333333;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="p1" target="est">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e4" value="F4: solicita curso + token" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontColor=#333333;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="est" target="p2">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e5" value="F5: consulta" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontColor=#333333;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="p2" target="d2">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e6" value="F6: contenido" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontColor=#333333;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="p2" target="est">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
