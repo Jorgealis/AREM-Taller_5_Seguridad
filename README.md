@@ -1,4 +1,16 @@
-# 🛠️ Taller 5: Evaluación de Seguridad con STRIDE
+# Desarrollo del Taller 5: Evaluación de Seguridad con STRIDE
+La explicación de esta parte se encuentra en el archivo Markdown [Notas](clase/notas.md).
+
+Nombres de los integrantes del grupo:
+- Brayan Presiga 
+- Julián Aguirre
+- Jorge Alarcon
+
+  
+---
+# Contexto:
+
+## 🛠️ Taller 5: Evaluación de Seguridad con STRIDE
 
 ## 🎯 Objetivo
 
