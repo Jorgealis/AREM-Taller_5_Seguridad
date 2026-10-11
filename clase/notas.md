@@ -14,10 +14,9 @@ _11 de septiembre de 2026_ — **(ajustar si la fecha real de la sesión fue otr
 - Elegimos, dentro del caso base de EdukIT, el flujo de **acceso de estudiantes a cursos y materiales** — el mismo que trae resuelto la guía — y lo reprodujimos en draw.io como `dfd-edukit-borrador.drawio`: el estudiante se autentica (P1), obtiene un token y luego solicita contenido al módulo de cursos (P2), marcando el límite de confianza entre el estudiante (fuera) y el backend de EdukIT (dentro).
 - Sobre ese DFD aplicamos las 6 categorías STRIDE, una amenaza por categoría (T1 a T6), y completamos las columnas de impacto, probabilidad, nivel de riesgo, mitigación, responsable y estado siguiendo exactamente la tabla ya resuelta en la guía — quedó registrada en `tabla-stride-clase.xlsx`.
 - Discutimos la diferencia entre una amenaza genérica ("puede haber un hackeo") y una amenaza bien formulada sobre un elemento específico del DFD (ej. "el token de sesión F3 puede ser interceptado si no se usa TLS") — uno de los errores comunes que señala la guía.
-- Completamos el **reto práctico #1 de OWASP Juice Shop** (login bypass explotando la ausencia de consultas parametrizadas) en una instancia local levantada con Docker, y lo integramos como una fila adicional (T7) en la tabla de clase, tal como pide el punto 6 del README. No se repitió ninguna técnica activa contra ningún sistema real — ese límite se respetó estrictamente.
 - Con el ejemplo de EdukIT ya resuelto, discutimos qué flujo crítico del cliente real ameritaba el mismo análisis. Se descartó "gestión de eventos" (bajo volumen de datos sensibles) y se eligió **el registro y gestión de datos personales de usuarios/afiliados en Koha y Llave del Saber**, por ser el flujo que más directamente conecta con los hallazgos ya diagnosticados en los Talleres 3 y 4 (duplicidad de sistemas, credencial única, datos de menores de edad).
-- Herramientas usadas: draw.io para los DFD, Excel/`openpyxl` para las tablas STRIDE siguiendo la plantilla oficial, Docker para levantar OWASP Juice Shop.
-- Alcanzamos a completar el caso base de EdukIT por completo (DFD + tabla STRIDE de 7 filas) y a bocetar el DFD inicial del cliente real. Quedó pendiente para fuera de clase el reconocimiento pasivo autorizado sobre el sistema real, la tabla STRIDE completa del cliente, y la redacción del informe y las referencias.
+- Herramientas usadas: draw.io para los DFD, Excel/`openpyxl` para las tablas STRIDE siguiendo la plantilla oficial.
+- Alcanzamos a completar el caso base de EdukIT por completo (DFD + tabla STRIDE de 6 filas) y a bocetar el DFD inicial del cliente real. Quedó pendiente para fuera de clase el reconocimiento pasivo autorizado sobre el sistema real, la tabla STRIDE completa del cliente, y la redacción del informe y las referencias.
 
 ## 🧩 Boceto inicial del modelo
 
@@ -31,7 +30,6 @@ _11 de septiembre de 2026_ — **(ajustar si la fecha real de la sesión fue otr
 |---|---|---|---|
 | T4 | Information Disclosure | BD de Usuarios (D1) | Alto |
 | T1 | Spoofing | Sistema de Autenticación (P1) / Credenciales (F1) | Alto |
-| T7 | Spoofing | Formulario de login (reto práctico Juice Shop) | Alto |
 | T6 | Elevation of Privilege | Solicitud de curso con rol (F4) | Medio |
 | T2 | Tampering | Token de sesión (F3) | Medio |
 | T3 | Repudiation | Sistema de Autenticación (P1) — registro de acciones | Medio |
